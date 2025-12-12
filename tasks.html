@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./tasks.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="card">
+            <h1>Tasks</h1>
+            <ul>
+                <li><a href="/dashboard.html">Home</a></li>
+                <li><a href="/tasks.html">Tasks</a></li>
+                <li><a href="/users.html">Users</a></li>
+                <li><a href="/calculator.html">Calculator</a></li>
+            </ul>
+        </aside>
+        <main class="card">
+                <h1>Simple Task Manager</h1>
+              
+                <!-- Loading ტექსტი -->
+                <div id="loading" class="loading">Loading...</div>
+              
+                <!-- მესიჯები (წარმატება / შეცდომა) -->
+                <div id="message" class="messages"></div>
+              
+                <!-- ფორმა: Create / Update Task -->
+                <form id="taskForm">
+                  <h2>დავალების დამატება / შეცვლა</h2>
+              
+                  <label>
+                    სათაური (title):
+                    <input type="text" id="title" />
+                  </label>
+              
+                  <label>
+                    აღწერა (description):
+                    <textarea id="description"></textarea>
+                  </label>
+              
+                  <label>
+                    პრიორიტეტი (priority):
+                    <select id="priority">
+                      <option value="low">Low</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="high">High</option>
+                    </select>
+                  </label>
+              
+                  <label>
+                    დასრულების თარიღი (dueDate):
+                    <input type="date" id="dueDate" />
+                  </label>
+              
+                  <label>
+                    სტატუსი (status):
+                    <select id="status">
+                      <option value="pending" selected>Pending</option>
+                      <option value="done">Done</option>
+                    </select>
+                  </label>
+              
+                  <button type="submit">Save Task</button>
+                </form>
+              
+                <!-- ფილტრები: by priority, by status -->
+                <div class="filters">
+                  <h3>ფილტრები</h3>
+              
+                  <label>
+                    Priority ფილტრი:
+                    <select id="filterPriority">
+                      <option value="">All</option>
+                      <option value="low">Low</option>
+                      <option value="medium">Medium</option>
+                      <option value="high">High</option>
+                    </select>
+                  </label>
+              
+                  <label>
+                    Status ფილტრი:
+                    <select id="filterStatus">
+                      <option value="">All</option>
+                      <option value="pending">Pending</option>
+                      <option value="done">Done</option>
+                    </select>
+                  </label>
+              
+                  <button type="button" id="clearFiltersBtn">ფილტრების გასუფთავება</button>
+                </div>
+              
+                <!-- ორი ცალკე კონტეინერი task-ებისთვის -->
+                <h2>Pending Tasks</h2>
+                <ul id="pendingList"></ul>
+              
+                <h2>Done Tasks</h2>
+                <ul id="doneList"></ul>
+
+        </main>
+    </div>
+    <script src="./tasks.js"></script>
+</body>
+</html>

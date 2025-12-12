@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        </main>
+            <aside class="card sidebar">
+                <h1>Calculator</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="./tasks.html">Tasks</a></li>
+                        <li><a href="./users.html">Users</a></li>
+                        <li><a href="./calculator.html">Calculator</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="card main-area">
+                <header class="dash-header">
+                    <h2>Calculator</h2>
+                    <p class="muted">Simple calculator </p>
+                </header>
+
+                <section class="calc-panel card" style="max-width:420px;">
+                    <input id="calc-display" readonly style="width:100%;padding:12px;border-radius:6px;border:1px solid #e5e7eb;margin-bottom:8px;font-size:18px" />
+                    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                        <button class="calc-btn" data-val="7">7</button>
+                        <button class="calc-btn" data-val="8">8</button>
+                        <button class="calc-btn" data-val="9">9</button>
+                        <button class="calc-btn" data-val="/">/</button>
+
+                        <button class="calc-btn" data-val="4">4</button>
+                        <button class="calc-btn" data-val="5">5</button>
+                        <button class="calc-btn" data-val="6">6</button>
+                        <button class="calc-btn" data-val="*">*</button>
+
+                        <button class="calc-btn" data-val="1">1</button>
+                        <button class="calc-btn" data-val="2">2</button>
+                        <button class="calc-btn" data-val="3">3</button>
+                        <button class="calc-btn" data-val="-">-</button>
+
+                        <button class="calc-btn" data-val="0">0</button>
+                        <button class="calc-btn" data-val=".">.</button>
+                        <button class="calc-btn" data-val="=">=</button>
+                        <button class="calc-btn" data-val="+">+</button>
+
+                        <button class="calc-btn" data-val="(">(</button>
+                        <button class="calc-btn" data-val=")">)</button>
+                        <button class="calc-btn" data-val="BS">⌫</button>
+                        <button class="calc-btn" data-val="C">C</button>
+                    </div>
+                </section>
+            </main>
+    </div>
+        <script src="./calculator.js"></script>
+    </body>
+    </html>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="card sidebar">
+            <h1>Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="./landing.html">Home</a></li>
+                    <li><a href="./tasks.html">Tasks</a></li>
+                    <li><a href="./users.html">Users</a></li>
+                    <li><a href="./calculator.html">Calculator</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="card main-area">
+            <header class="dash-header">
+                <h2>Welcome back</h2>
+                <p class="muted">Overview of recent activity</p>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat card">
+                    <h3>Users</h3>
+                    <p class="stat-value">1,254</p>
+                </div>
+                <div class="stat card">
+                    <h3>Active Tasks</h3>
+                    <p class="stat-value">32</p>
+                </div>
+                <div class="stat card">
+                    <h3>Completed</h3>
+                    <p class="stat-value">1,102</p>
+                </div>
+                <div class="stat card">
+                    <h3>Errors</h3>
+                    <p class="stat-value">3</p>
+                </div>
+            </section>
+
+            <section class="chart-grid">
+                <div class="card chart-card">
+                    <h3>Activity</h3>
+                    <canvas id="activityChart" height="160"></canvas>
+                </div>
+                <div class="card chart-card">
+                    <h3>Distribution</h3>
+                    <canvas id="distChart" height="160"></canvas>
+                </div>
+            </section>
+
+            <section class="tasks-section card">
+                <h3>Tasks</h3>
+                <div id="tasks-widget">
+                    
+                    <ul class="tasks-list">
+                        <li>No tasks loaded</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./tasks.js"></script>
+    <script src="./dashboard.js"></script>
+</body>
+</html>

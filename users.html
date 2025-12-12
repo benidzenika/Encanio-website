@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="card sidebar">
+            <h1>Users</h1>
+            <nav>
+                <ul>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./tasks.html">Tasks</a></li>
+                    <li><a href="./users.html">Users</a></li>
+                    <li><a href="./calculator.html">Calculator</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="card main-area">
+            <header class="dash-header">
+                <h2>Users</h2>
+                <p class="muted">Manage and view all users</p>
+            </header>
+
+            <section class="users-panel card">
+                <div class="users-controls" style="display:flex;gap:8px;margin-bottom:12px;">
+                    <input id="user-search" placeholder="Search users..." style="flex:1;padding:8px;border-radius:6px;border:1px solid #e5e7eb" />
+                    <button id="add-user" style="padding:8px 12px;border-radius:6px;background:#4f46e5;color:white;border:none">Add</button>
+                </div>
+
+                <table id="users-table" style="width:100%;border-collapse:collapse">
+                    <thead>
+                        <tr style="text-align:left;color:#6b7280;font-size:13px">
+                            <th style="padding:8px">Name</th>
+                            <th style="padding:8px">Email</th>
+                            <th style="padding:8px">Role</th>
+                            <th style="padding:8px">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="./users.js"></script>
+</body>
+</html>
